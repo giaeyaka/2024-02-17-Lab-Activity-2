@@ -4,15 +4,19 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Enter text (type 'exit' to terminate):");
+        string userInput = "";
+        string output = "";
 
-        string input;
-        do
+        Console.WriteLine("Enter something:");
+
+        while ((userInput = Console.ReadLine()) != "exit")
         {
-            input = Console.ReadLine();
-            Console.WriteLine("You entered: " + input);
-        } while (input != "exit");
+            output += userInput + " ";
+            Console.WriteLine(output.Trim());
+            Console.WriteLine("Enter something:");
+        }
 
-        Console.WriteLine("Program terminated.");
+        Console.WriteLine("\nClosing program...");
     }
 }
+
